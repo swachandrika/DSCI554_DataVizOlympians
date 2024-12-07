@@ -1,0 +1,224 @@
+.venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: 1fr 1fr; /* Two rows */
+    gap: 20px; /* Space between sections */
+    height: 100%; /* Take full height of the container */
+    padding: 20px; /* Add padding around the grid */
+    background-color: #f5f5f5; /* Subtle background */
+  }
+  
+  .venue-section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .venue-section h2 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .venue-section iframe {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  .venue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .venue-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .venue-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .responsive-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  iframe {
+    border-radius: 8px;
+  }
+
+  .venue-container {
+    font-family: Arial, sans-serif;
+    position: relative; /* Position relative for absolute children */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between; /* Space between title and menu icon */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    z-index: 10; /* Ensure header is above other elements */
+  }
+
+  .menu-icon {
+    font-size: 24px; /* Size of the menu icon */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  .side-nav {
+    width: 200px; /* Width of the side navigation */
+    background-color: #444; /* Background color */
+    color: white;
+    position: absolute; /* Position absolute to overlap content */
+    left: -200px; /* Hide off-screen */
+    top: 0;
+    height: 100%; /* Full height */
+    transition: left 0.3s; /* Smooth transition */
+    padding-top: 60px; /* Space for header */
+    z-index: 5; /* Ensure nav is above content */
+  }
+
+  .side-nav.open {
+    left: 0; /* Show when open */
+  }
+
+  .side-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .side-nav li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .side-nav li:hover {
+    background-color: #555; /* Change background on hover */
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .section {
+    margin-top: 20px;
+    background-color: white;
+  }
+
+  .venue-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and menu icon */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    background-color: #333; /* Header background color */
+    color: white; /* Header text color */
+  }
+
+  .menu-icon {
+    font-size: 24px; /* Size of the menu icon */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 0 1rem;
+  }
+  
+  .navbar ul li button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar ul li button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .navbar ul li button.active {
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fancy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fancy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .fancy-button .arrow {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  
+  .fancy-button .tooltip {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    vertical-align: middle;
+  }
+  

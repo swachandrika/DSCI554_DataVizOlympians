@@ -1,0 +1,143 @@
+/* Landing Page Styles */
+.landing-page {
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0; /* Space around content */
+}
+
+/* Video Background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay Content */
+/* .overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+} */
+
+/* Title (Logo section) */
+.title {
+    font-size: 3rem;
+    color: #380418;
+    /* font-family: 'Times New Roman'; */
+    font-weight: 1000;
+    margin-top: auto; /* Push title/logo to the top */
+}
+
+/* Countdown Timer Container */
+.countdown-container {
+    background: rgba(241, 231, 231, 0.640); /* Semi-transparent background */
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Start invisible */
+    animation: fade-in ease-in-out 2s forwards; /* Fade-in animation */
+    width: fit-content; /* Automatically adjust container width */
+    text-align: center;
+    color: black;
+    margin-top: 5rem;
+    transform: translateX(14px);
+}
+
+/* Timer */
+.timer {
+    display: flex;
+    justify-content: space-evenly;
+    color: #900C3F;
+    gap: 10px;
+}
+
+.timer div {
+    text-align: center;
+}
+
+.timer span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.timer small {
+    display: block;
+    font-size: 1rem;
+}
+
+/* Button */
+.get-started {
+    background: #530219;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: fade-in ease-in-out 2s forwards;
+    margin-top: 19rem;
+    font-family: 'Arial';
+    font-weight: 800;
+    transform: translateX(27px);
+}
+
+.get-started:hover {
+    background: #900C3F;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.get-started {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-started:hover {
+    background-color: #0056b3;
+}
+
+.overlay {
+  position: absolute;  /* Position the overlay over the video */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1;  /* Ensure it appears on top of the video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px; /* Adjust padding to avoid content touching edges */
+  overflow: auto; /* Ensure content inside can scroll if needed */
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Carousel Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #ffffff;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 600px;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%; /* Full width for each slide */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px; /* Adjust height to fit content */
+            box-sizing: border-box;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            background-color: #ffffff; /* Added background color */
+        }
+
+        iframe {
+            width: 90%; /* Adjust iframe width */
+            height: 90%; /* Adjust iframe height */
+            border: none; /* Ensure no border */
+            box-shadow: none; /* Remove box shadow */
+            border-radius: 8px; /* Keep rounded corners if desired */
+        }
+
+        /* Carousel Controls */
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+                <iframe 
+                    src="medal.html" 
+                    title="Medal Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+            </div>
+            <!-- Slide 2
+            <div class="carousel-item">
+                <iframe 
+                    src="countryplayinghist.html" 
+                    title="Game Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+            </div> -->
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <iframe 
+                    src="country.html" 
+                    title="Country Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+            </div>
+            <!-- Slide 4 -->
+            <!-- <div class="carousel-item">
+                <iframe 
+                    src="gender.html" 
+                    title="Gender Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+            </div> -->
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+            <button id="prev" aria-label="Previous Slide">&lt;</button>
+            <button id="next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.querySelector('#prev');
+        const nextButton = document.querySelector('#next');
+
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>

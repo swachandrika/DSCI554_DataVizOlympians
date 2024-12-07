@@ -1,0 +1,69 @@
+
+<div id="carousel-container" class="carousel-container">
+        <div class="carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+                <iframe 
+                    src="https://flo.uri.sh/visualisation/16550311/embed" 
+                    title="Medal Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+                    >
+                </iframe>
+            </div>
+            <!-- Slide 2
+            <div class="carousel-item">
+                <iframe 
+                    src="countryplayinghist.html" 
+                    title="Game Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+            </div> -->
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <iframe 
+                    src="https://flo.uri.sh/visualisation/16550608/embed" 
+                    title="Country Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+                    >
+                </iframe>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <iframe 
+                    src="https://flo.uri.sh/visualisation/16534409/embed" 
+                    title="Gender Tracking Visualization"
+                    sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+                    >
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+            <button id="prev" aria-label="Previous Slide">&lt;</button>
+            <button id="next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </div>
+<!-- 
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.querySelector('#prev');
+        const nextButton = document.querySelector('#next');
+
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+            updateCarousel();
+        });
+    </script> -->
