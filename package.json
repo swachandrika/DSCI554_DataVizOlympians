@@ -1,10 +1,13 @@
 {
   "name": "a4",
   "version": "1.0.0",
-  "description": "A COVID-19 dashboard using React, Bootstrap, and D3",
+  "homepage": "https://swachandrika.github.io/DSCI554_DataVizOlympians/",
+  "description": "A dashboard using React, Bootstrap, and D3",
   "main": "index.js",
   "scripts": {
     "serve": "browser-sync start ./ -s --files './' --directory --watch --port 2000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
